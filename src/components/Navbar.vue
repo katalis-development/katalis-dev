@@ -1,7 +1,7 @@
 <template>
-    <nav class="flex justify-between p-4 shadow items-center">
-        <h1 class="text-2xl">
-            <a href="">Katalis Dev</a>
+    <nav class="flex fixed z-10 w-full bg-black/10 backdrop-blur-2xl justify-between px-30 py-4 shadow items-center">
+        <h1 class="text-2xl font-bold">
+            Katalis Dev &lt;/&gt;
         </h1>
         <ul class="flex gap-4">
             <li><a href="">Home</a></li>
@@ -11,3 +11,12 @@
         </ul>
     </nav>
 </template>
+
+<style>
+    a {
+        color: white;
+    }
+    a:hover {
+        color: slateblue;
+    }
+</style>
