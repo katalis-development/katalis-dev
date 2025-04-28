@@ -1,14 +1,17 @@
 <template>
     <div class="h-screen hero-bg">
-        <div class="p-10 flex flex-wrap lg:flex-nowrap justify-between">
-            <div class="lg:w-2/3 flex flex-col mt-20">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-12 md:leading-15 lg:leading-17 text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-sky-400 to-neutral-200 mb-32">
-                    Catalyzing Your Digital Transformation
-                    <span class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-100 via-sky-400 to-sky-100 shadow-lg">
-                        with Katalis Dev
-                    </span>
-                </h1>
-                <p class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-300 to-neutral-200 leading-5 tracking-wide">We craft modern, scalable web solutions to elevate your brand and accelerate your success.</p>
+        <div class="px-10 flex flex-wrap lg:flex-nowrap justify-between">
+            <div class="lg:w-2/3 flex flex-col mt-30">
+               <div class="mb-20 flex flex-col gap-5">
+                   <h1 class="text-4xl lg:text-5xl font-extrabold leading-12 md:leading-13 lg:leading-15 text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-rose-400">
+                       Catalyzing Your Digital Transformation
+                       <span class="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-100 via-purple-300 to-sky-300 shadow-lg">
+                           with Katalis Dev
+                       </span>
+                   </h1>
+                   <p class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider ">We craft modern, scalable web solutions to elevate your brand and accelerate your success.</p>
+               </div>
+               
                 <button class="px-8 mt-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer">
                     <span>Get Started</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
