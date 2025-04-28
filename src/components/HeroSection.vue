@@ -26,7 +26,7 @@
 
 <style>
 .hero-bg {
-    background: url('../assets/bg-hero.jpg');
+    background: url('../assets/bg-banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
