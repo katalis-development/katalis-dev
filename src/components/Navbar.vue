@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed z-10 w-full bg-black/10 backdrop-blur-2xl px-10 py-4 shadow flex items-center justify-between">
+    <nav class="fixed z-20 w-full bg-black/10 backdrop-blur-sm px-10 py-4 shadow flex items-center justify-between">
     
     <a href="#" class="text-lg lg:text-2xl font-bold text-white">
         Katalis Dev &lt;/&gt;
