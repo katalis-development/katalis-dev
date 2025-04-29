@@ -24,7 +24,7 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center scale-95 transform transition-all duration-300">
+        <div id="mobile-menu" class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300">
             <a href="#" class="hover:text-blue-400 transition">Home</a>
             <a href="#services" class="hover:text-blue-400 transition">Services</a>
             <a href="#about" class="hover:text-blue-400 transition">About</a>
