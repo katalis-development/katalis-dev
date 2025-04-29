@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section id="services" class="relative bg-fixed bg-center bg-cover bg-no-repeat bg-parralax">
+    <section id="services" class="relative bg-fixed bg-parralax">
         <div class="backdrop-blur-md bg-black/60 py-20">
             <div class="max-w-7xl mx-auto px-10 text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-sky-700 mb-12">
@@ -87,5 +87,8 @@
 <style>
 .bg-parralax {
     background-image: url('../assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 </style>

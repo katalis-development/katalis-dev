@@ -1,35 +1,35 @@
 <template>
     <nav class="fixed z-20 w-full bg-black/10 backdrop-blur-sm px-10 py-4 shadow flex items-center justify-between">
     
-    <a href="#" class="text-lg lg:text-2xl font-bold text-white">
-        Katalis Dev &lt;/&gt;
-    </a>
+        <a href="#" class="text-lg lg:text-2xl font-bold text-white">
+            Katalis Dev &lt;/&gt;
+        </a>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-8 items-center">
-        <a href="#" class="hover:text-blue-400 transition">Home</a>
-        <a href="#services" class="hover:text-blue-400 transition">Services</a>
-        <a href="#about" class="hover:text-blue-400 transition">About</a>
-        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-    </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 items-center">
+            <a href="#" class="hover:text-blue-400 transition">Home</a>
+            <a href="#services" class="hover:text-blue-400 transition">Services</a>
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="flex md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-        <!-- Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-        </svg>
-        </button>
-    </div>
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+            </button>
+        </div>
 
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="lg:hidden absolute top-20 right-6 bg-black/80 backdrop-blur-lg rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300">
-        <a href="#" class="hover:text-blue-400 transition">Home</a>
-        <a href="#services" class="hover:text-blue-400 transition">Services</a>
-        <a href="#about" class="hover:text-blue-400 transition">About</a>
-        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-    </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center scale-95 transform transition-all duration-300">
+            <a href="#" class="hover:text-blue-400 transition">Home</a>
+            <a href="#services" class="hover:text-blue-400 transition">Services</a>
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
     </nav>
 </template>
 

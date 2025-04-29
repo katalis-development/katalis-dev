@@ -1,5 +1,5 @@
 <template>
-    <footer class="relative text-white py-10 px-6 mt-20 overflow-hidden">
+    <footer class="relative text-white py-10 px-6 overflow-hidden">
       <!-- Background Blur Layer -->
       <div class="absolute inset-0 bg-footer">
         <div class="w-full h-full backdrop-blur-xs"></div>

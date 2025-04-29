@@ -1,5 +1,5 @@
 <template>
-    <section id="contact" class="min-h-screen flex items-center justify-center px-6 py-20" style="background: radial-gradient(circle, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.7)), url('/path-to-your-image.jpg'); background-size: cover;">
+    <section id="contact" class="min-h-screen flex items-center justify-center px-6 py-20 bg-radial from-neutral-800 from-40% to-neutral-950" >
         <div class="max-w-4xl w-full text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600">
             Get In Touch

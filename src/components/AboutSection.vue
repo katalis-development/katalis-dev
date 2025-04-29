@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="min-h-screen flex items-center justify-center bg-neutral-800 text-white px-6 py-20">
+    <section id="about" class="min-h-screen flex items-center justify-center bg-radial from-neutral-800 from-40% to-neutral-950 text-white px-6 py-20">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600">
             About Katalis Dev

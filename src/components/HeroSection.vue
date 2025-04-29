@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen hero-bg relative">
+    <section class="h-screen hero-bg relative safe-top">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"></div>
         <div class="px-10 flex flex-wrap lg:flex-nowrap justify-between">
             <div class="w-full lg:w-2/3 flex flex-col mt-30">
@@ -21,14 +21,17 @@
             </div>
             <img src="../assets/hero.png" class="hidden lg:inline-block lg:w-4xl h-max rounded-4xl mt-20" alt="">
         </div>
-    </div>
+    </section>
 </template>
 
 <style>
-.hero-bg {
-    background: url('../assets/bg-banner.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position:relative;
-}
+    .hero-bg {
+        background: url('../assets/bg-banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position:relative;
+    }
+    .safe-top {
+        padding-top: env(safe-area-inset-top);
+    }
 </style>
