@@ -5,14 +5,13 @@
   >
     <div class="max-w-4xl w-full text-center">
       <h2
-        class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
+        class="text-4xl md:text-5xl font-extrabold mb-6 py-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
       >
         {{ $t("contact.title") }}
       </h2>
       <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">
         {{ $t("contact.subtitle") }}
       </p>
-
       <form
         class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg"
       >
@@ -27,7 +26,6 @@
             class="p-3 rounded-lg bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
           />
         </div>
-
         <div class="flex flex-col gap-2">
           <label for="email" class="text-left text-gray-400 text-sm">{{
             $t("contact.email")
@@ -39,7 +37,6 @@
             class="p-3 rounded-lg bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
           />
         </div>
-
         <div class="flex flex-col gap-2 md:col-span-2">
           <label for="message" class="text-left text-gray-400 text-sm">{{
             $t("contact.message")
@@ -51,7 +48,6 @@
             class="p-3 rounded-lg bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
           ></textarea>
         </div>
-
         <div class="md:col-span-2">
           <button
             type="submit"
