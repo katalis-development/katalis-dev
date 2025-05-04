@@ -5,7 +5,7 @@
     <div class="backdrop-blur-md bg-black/60 py-20">
       <div class="max-w-7xl mx-auto px-10 text-center">
         <h2
-          class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-sky-700 mb-12"
+          class="text-4xl md:text-5xl py-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-sky-700 mb-12"
         >
           {{ $t("services.title") }}
         </h2>
