@@ -7,10 +7,10 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex gap-8 items-center">
-            <a href="#" class="hover:text-blue-400 transition">Home</a>
-            <a href="#services" class="hover:text-blue-400 transition">Services</a>
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            <a href="#" class="hover:text-blue-400 font-semibold transition">Home</a>
+            <a href="#services" class="hover:text-blue-400 font-semibold transition">Services</a>
+            <a href="#about" class="hover:text-blue-400 font-semibold transition">About</a>
+            <a href="#contact" class="hover:text-blue-400 font-semibold transition">Contact</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -25,10 +25,10 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300">
-            <a href="#" class="hover:text-blue-400 transition">Home</a>
-            <a href="#services" class="hover:text-blue-400 transition">Services</a>
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            <a href="#" class="hover:text-blue-400 font-bold transition">Home</a>
+            <a href="#services" class="hover:text-blue-400 font-bold transition">Services</a>
+            <a href="#about" class="hover:text-blue-400 font-bold transition">About</a>
+            <a href="#contact" class="hover:text-blue-400 font-bold transition">Contact</a>
         </div>
     </nav>
 </template>
@@ -59,10 +59,5 @@
 </script>
 
 <style>
-    a {
-        color: white;
-    }
-    a:hover {
-        color: slateblue;
-    }
+   
 </style>

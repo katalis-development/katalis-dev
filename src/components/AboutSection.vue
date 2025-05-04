@@ -1,8 +1,8 @@
 <template>
-    <section id="about" class="min-h-screen flex items-center justify-center bg-radial from-neutral-800 from-40% to-neutral-950 text-white px-6 py-20">
+    <section id="about" class="min-h-screen flex items-center justify-center bg-fixed bg-parallax text-white px-6 py-20">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600">
-            About Katalis Dev
+                About Katalis Dev
             </h2>
             <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">
             At <span class="font-semibold text-white">Katalis Dev</span>, we are passionate about helping businesses embrace the digital era. 
@@ -36,3 +36,12 @@
     </section>
 
 </template>
+
+<style scoped>
+.bg-parallax {
+    background-image: url('../assets/dark-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+</style>
