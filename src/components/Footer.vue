@@ -17,9 +17,6 @@
             <p class="text-neutral-300 mb-4">
               Leading the way in digital innovation, delivering high-performance solutions for businesses worldwide.
             </p>
-            <p class="text-neutral-300 text-sm">
-              © 2025 Katalis Dev. All Rights Reserved.
-            </p>
           </div>
   
           <!-- Quick Links -->
@@ -27,9 +24,9 @@
             <h4 class="text-lg font-semibold mb-4 text-neutral-300">Quick Links</h4>
             <ul class="text-gray-400 space-y-2">
               <li><a href="#" class="hover:text-teal-400 transition">Home</a></li>
-              <li><a href="#" class="hover:text-teal-400 transition">Services</a></li>
-              <li><a href="#" class="hover:text-teal-400 transition">About</a></li>
-              <li><a href="#" class="hover:text-teal-400 transition">Contact</a></li>
+              <li><a href="#services" class="hover:text-teal-400 transition">Services</a></li>
+              <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+              <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
             </ul>
           </div>
   
@@ -65,7 +62,7 @@
         <!-- Footer Bottom -->
         <div class="border-t border-gray-700 pt-6">
           <p class="text-sm text-neutral-300">
-            Crafted with ❤️ by Katalis Dev | Designed for the modern web.
+            © 2025 Katalis Dev. All Rights Reserved.
           </p>
         </div>
       </div>
