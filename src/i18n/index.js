@@ -45,7 +45,7 @@ const messages = {
     about: {
       title: "About Katalis Dev",
       intro:
-        "At Katalis Dev, we are passionate about helping businesses embrace the digital era. With a deep commitment to innovation and quality, we craft powerful websites, mobile apps, and digital experiences that catalyze your growth and transformation.",
+        'At <span class="font-semibold text-white">Katalis Dev</span>, we are passionate about helping businesses embrace the digital era. With a deep commitment to innovation and quality, we craft powerful websites, mobile apps, and digital experiences that catalyze your growth and transformation.',
       vision: {
         title: "Our Vision",
         desc: "To empower businesses by delivering world-class digital solutions and driving impactful transformation.",
@@ -124,7 +124,7 @@ const messages = {
     about: {
       title: "Tentang Katalis Dev",
       intro:
-        "Di Katalis Dev, kami bersemangat membantu bisnis merangkul era digital. Dengan komitmen mendalam terhadap inovasi dan kualitas, kami menciptakan situs web, aplikasi mobile, dan pengalaman digital yang kuat yang mengkatalisasi pertumbuhan dan transformasi Anda.",
+        'Di <span class="font-semibold text-white">Katalis Dev</span>, kami bersemangat membantu bisnis merangkul era digital. Dengan komitmen mendalam terhadap inovasi dan kualitas, kami menciptakan situs web, aplikasi mobile, dan pengalaman digital yang kuat yang mengkatalisasi pertumbuhan dan transformasi Anda.',
       vision: {
         title: "Visi Kami",
         desc: "Memberdayakan bisnis dengan memberikan solusi digital kelas dunia dan mendorong transformasi yang berdampak.",
@@ -167,6 +167,7 @@ const i18n = createI18n({
   locale: "en",
   fallbackLocale: "en",
   messages,
+  globalInjection: true,
 });
 
 export default i18n;

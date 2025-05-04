@@ -1,37 +1,62 @@
 <template>
-    <section class="h-screen hero-bg relative safe-top">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"></div>
-        <div class="px-10 flex flex-wrap lg:flex-nowrap justify-between">
-            <div class="w-full lg:w-2/3 flex flex-col mt-30">
-                <div class="mb-20 flex flex-col gap-5">
-                    <h1 class="text-4xl lg:text-5xl font-extrabold leading-12 md:leading-13 lg:leading-15 text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-rose-400">
-                        Catalyzing Your Digital Transformation with
-                        <span class="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-sky-400">
-                                Katalis Dev
-                        </span>
-                    </h1>
-                    <p class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider ">We craft modern, scalable web solutions to elevate your brand and accelerate your success.</p>
-                </div>
-                <button class="px-8 mt-10 z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer">
-                    <span>Get Started</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-            <img src="../assets/hero.png" class="hidden lg:inline-block lg:w-4xl h-max rounded-4xl mt-20" alt="">
+  <section class="h-screen hero-bg relative safe-top">
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
+    ></div>
+    <div class="px-10 flex flex-wrap lg:flex-nowrap justify-between">
+      <div class="w-full lg:w-2/3 flex flex-col mt-30">
+        <div class="mb-20 flex flex-col gap-5">
+          <h1
+            class="text-4xl lg:text-5xl font-extrabold leading-12 md:leading-13 lg:leading-15 text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-rose-400"
+          >
+            {{ $t("hero.title") }}
+            <span
+              class="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-sky-400"
+            >
+              {{ $t("nav.brandName") }}
+            </span>
+          </h1>
+          <p
+            class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider"
+          >
+            {{ $t("hero.subtitle") }}
+          </p>
         </div>
-    </section>
+        <button
+          class="px-8 mt-10 z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer"
+        >
+          <span>{{ $t("hero.cta") }}</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <img
+        src="../assets/hero.png"
+        class="hidden lg:inline-block lg:w-4xl h-max rounded-4xl mt-20"
+        alt=""
+      />
+    </div>
+  </section>
 </template>
 
 <style>
-    .hero-bg {
-        background: url('../assets/bg-banner.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        position:relative;
-    }
-    .safe-top {
-        padding-top: env(safe-area-inset-top);
-    }
+.hero-bg {
+  background: url("../assets/bg-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
 </style>
