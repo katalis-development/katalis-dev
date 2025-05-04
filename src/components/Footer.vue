@@ -2,7 +2,7 @@
     <footer class="relative text-white py-10 px-6 overflow-hidden">
       <!-- Background Blur Layer -->
       <div class="absolute inset-0 bg-footer">
-        <div class="w-full h-full backdrop-blur-xs"></div>
+        <div class="w-full h-full"></div>
       </div>
   
       <!-- Content Layer -->
