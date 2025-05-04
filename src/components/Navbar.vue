@@ -44,38 +44,7 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="flex md:hidden">
-      <button id="menu-toggle" class="text-white focus:outline-none">
-        <!-- Icon -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-7 h-7"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 8h16M4 16h16"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu Dropdown -->
-    <div
-      id="mobile-menu"
-      class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300"
-    >
-      <a href="#" class="hover:text-blue-400 font-bold transition">{{ $t("nav.home") }}</a>
-      <a href="#services" class="hover:text-blue-400 font-bold transition">{{ $t("nav.services") }}</a
-      >
-      <a href="#about" class="hover:text-blue-400 font-bold transition">{{ $t("nav.about") }}</a
-      >
-      <a href="#contact" class="hover:text-blue-400 font-bold transition">{{ $t("nav.contact") }}</a
-      >
+    <div class="flex gap-3 md:hidden">
       <!-- Language Switcher -->
       <button
         @click="toggleLanguage"
@@ -97,6 +66,39 @@
         </svg>
         {{ $i18n.locale === "en" ? "EN" : "ID" }}
       </button>
+
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <!-- Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-7 h-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 8h16M4 16h16"
+          />
+        </svg>
+      </button>
+    </div>
+    
+
+    <!-- Mobile Menu Dropdown -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300"
+    >
+      <a href="#" class="hover:text-blue-400 font-bold transition">{{ $t("nav.home") }}</a>
+      <a href="#services" class="hover:text-blue-400 font-bold transition">{{ $t("nav.services") }}</a
+      >
+      <a href="#about" class="hover:text-blue-400 font-bold transition">{{ $t("nav.about") }}</a
+      >
+      <a href="#contact" class="hover:text-blue-400 font-bold transition">{{ $t("nav.contact") }}</a
+      >
     </div>
   </nav>
 </template>
