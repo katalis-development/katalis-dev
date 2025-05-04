@@ -1,5 +1,8 @@
 <template>
-  <section id="contact" class="min-h-screen flex items-center justify-center px-6 py-20 bg-radial from-neutral-800 from-40% to-neutral-950">
+  <section
+    id="contact"
+    class="min-h-screen flex items-center justify-center px-6 py-20 bg-radial from-neutral-800 from-40% to-neutral-950"
+  >
     <div class="max-w-4xl w-full text-center">
       <h2
         class="text-4xl md:text-5xl font-extrabold mb-6 py-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
@@ -57,3 +60,15 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { useI18n } from "vue-i18n";
+import { onMounted } from "vue";
+
+const { t } = useI18n();
+
+onMounted(() => {
+  console.log("Contact title:", t("contact.title"));
+  console.log("i18n locale:", useI18n().locale.value);
+});
+</script>
