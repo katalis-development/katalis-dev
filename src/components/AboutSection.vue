@@ -6,7 +6,7 @@
     >
       <div class="max-w-5xl mx-auto text-center">
         <h2
-          class="text-4xl md:text-5xl py-2 font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
+          class="text-4xl md:text-5xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 mb-12"
         >
           {{ $t("about.title") }}
         </h2>
