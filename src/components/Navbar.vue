@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed z-20 w-full bg-black/10 backdrop-blur-sm px-10 py-4 shadow flex items-center justify-between"
+    class="fixed z-30 w-full bg-black/15 backdrop-blur-sm px-10 py-4 shadow flex items-center justify-between"
   >
     <a href="#" class="text-lg lg:text-2xl font-bold text-white">
       Katalis Dev &lt;/&gt;
@@ -8,21 +8,12 @@
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex gap-8 items-center">
-      <a href="#" class="hover:text-blue-400 transition">{{
-        $t("nav.home")
-      }}</a>
-      <a href="#services" class="hover:text-blue-400 transition">{{
-        $t("nav.services")
-      }}</a>
-       <a href="#pricing" class="hover:text-blue-400 transition">{{
-        $t("nav.pricing")
-      }}</a>
-      <a href="#about" class="hover:text-blue-400 transition">{{
-        $t("nav.about")
-      }}</a>
-      <a href="#contact" class="hover:text-blue-400 transition">{{
-        $t("nav.contact")
-      }}</a>
+      <a href="#" class="hover:text-blue-400 transition">{{ $t("nav.home") }}</a>
+      <a href="#services" class="hover:text-blue-400 transition">{{ $t("nav.services") }}</a>
+      <a href="#pricing" class="hover:text-blue-400 transition">{{ $t("nav.pricing") }}</a>
+      <a href="#about" class="hover:text-blue-400 transition">{{ $t("nav.about") }}</a>
+      <a href="#contact" class="hover:text-blue-400 transition">{{ $t("nav.contact") }}</a>
+
       <!-- Language Switcher -->
       <button
         @click="toggleLanguage"
@@ -70,8 +61,7 @@
         {{ $i18n.locale === "en" ? "EN" : "ID" }}
       </button>
 
-      <button id="menu-toggle" class="text-white focus:outline-none">
-        <!-- Icon -->
+      <button @click="toggleMenu" class="text-white focus:outline-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-7 h-7"
@@ -88,55 +78,52 @@
         </svg>
       </button>
     </div>
-    
-
-    <!-- Mobile Menu Dropdown -->
-    <div
-      id="mobile-menu"
-      class="lg:hidden absolute top-12 right-6 bg-black/60 backdrop-blur-2xl rounded-2xl p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300"
-    >
-      <a href="#" class="hover:text-blue-400 font-bold transition">{{ $t("nav.home") }}</a>
-      <a href="#services" class="hover:text-blue-400 font-bold transition">{{ $t("nav.services") }}</a
-      >
-      <a href="#pricing" class="hover:text-blue-400 font-bold transition">{{ $t("nav.pricing") }}</a
-        >
-      <a href="#about" class="hover:text-blue-400 font-bold transition">{{ $t("nav.about") }}</a
-      >
-      <a href="#contact" class="hover:text-blue-400 font-bold transition">{{ $t("nav.contact") }}</a
-      >
-    </div>
   </nav>
+
+  <!-- Fullscreen Overlay -->
+  <div
+    v-if="isMenuOpen"
+    @click="closeMenu"
+    class="fixed inset-0 z-10 bg-white/5 backdrop-blur-xs transition-all duration-300 md:hidden"
+  ></div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="fixed top-14 w-1/2 left-28 z-20 bg-black/30 rounded-2xl backdrop-blur-xs p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300 md:hidden"
+    :class="{ 'opacity-100 scale-100': isMenuOpen }"
+  >
+    <a href="#" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.home") }}</a>
+    <a href="#services" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.services") }}</a>
+    <a href="#pricing" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.pricing") }}</a>
+    <a href="#about" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.about") }}</a>
+    <a href="#contact" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.contact") }}</a>
+  </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
   methods: {
     toggleLanguage() {
-      const currentLocale = this.$i18n.locale;
-      this.$i18n.locale = currentLocale === "en" ? "id" : "en";
+      this.$i18n.locale = this.$i18n.locale === "en" ? "id" : "en";
     },
-  },
-  mounted() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-
-      if (!mobileMenu.classList.contains("hidden")) {
-        setTimeout(() => {
-          mobileMenu.classList.add("opacity-100", "scale-100");
-          mobileMenu.classList.remove("opacity-0", "scale-95");
-        }, 10);
-        document.body.style.overflow = "hidden";
-      } else {
-        mobileMenu.classList.remove("opacity-100", "scale-100");
-        mobileMenu.classList.add("opacity-0", "scale-95");
-        document.body.style.overflow = "auto";
-      }
-    });
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      document.body.style.overflow = this.isMenuOpen ? "hidden" : "auto";
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+      document.body.style.overflow = "auto";
+    },
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+/* You can add scoped styling here if needed */
+</style>

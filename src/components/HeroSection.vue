@@ -27,7 +27,7 @@
           </p>
         </div>
         <a href="#contact"
-          class="px-8 mt-10 z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer"
+          class="px-8 mt-10 animate-pulse z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer"
         >
           <span>{{ $t("hero.cta") }}</span>
           <svg

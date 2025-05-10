@@ -44,7 +44,7 @@
         <div class="md:col-span-2">
           <button
             type="submit"
-            class="w-full bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 hover:opacity-90 text-white font-bold py-3 rounded-lg transition duration-300"
+            class="w-full bg-gradient-to-r cursor-pointer from-teal-400 via-blue-500 to-indigo-600 hover:opacity-90 text-white font-bold py-3 rounded-lg transition duration-300"
           >
             {{ $t("contact.submit") }}
           </button>
