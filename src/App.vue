@@ -5,12 +5,14 @@ import ServicesSection from './components/ServicesSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import Footer from './components/Footer.vue'
+import PricingPlans from './components/PricingPlans.vue'
 </script>
 
 <template>
   <Navbar/>
   <HeroSection />
   <ServicesSection />
+  <PricingPlans />
   <AboutSection/>
   <ContactSection/>
   <Footer />

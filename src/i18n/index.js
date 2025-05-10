@@ -5,6 +5,7 @@ const messages = {
     nav: {
       home: "Home",
       services: "Services",
+      pricing: "Pricing",
       about: "About",
       contact: "Contact",
       brandName: "Katalis Dev",
@@ -67,7 +68,7 @@ const messages = {
       email: "Email",
       message: "Message",
       namePlaceholder: "Your Name",
-      emailPlaceholder: "your Email",
+      emailPlaceholder: "Your Email",
       messagePlaceholder: "Write your message...",
       submit: "Send Message",
     },
@@ -84,6 +85,7 @@ const messages = {
     nav: {
       home: "Beranda",
       services: "Layanan",
+      pricing: "Harga",
       about: "Tentang",
       contact: "Kontak",
       brandName: "Katalis Dev",

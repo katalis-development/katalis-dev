@@ -1,10 +1,10 @@
 <script></script>
 
 <template>
-  <section id="services" class="relative bg-radial py-20 from-neutral-800 from-40% to-neutral-950">
+  <section id="services" class="min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-[#060d1d] via-blue-900 to-[#070c16]">
     <div class="max-w-7xl mx-auto px-10 text-center">
       <h2
-        class="text-4xl md:text-5xl py-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-sky-700 mb-12"
+        class="text-4xl md:text-5xl py-2 mb-10 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
       >
         {{ $t("services.title") }}
       </h2>

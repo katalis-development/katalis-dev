@@ -3,7 +3,7 @@
     <div
       class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
     ></div>
-    <div class="px-10 flex flex-wrap lg:flex-nowrap justify-between">
+    <div class="p-20 flex flex-wrap lg:flex-nowrap justify-between">
       <div class="w-full lg:w-2/3 flex flex-col mt-30">
         <div class="mb-20 flex flex-col gap-5">
           <h1

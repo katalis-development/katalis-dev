@@ -14,6 +14,9 @@
       <a href="#services" class="hover:text-blue-400 transition">{{
         $t("nav.services")
       }}</a>
+       <a href="#pricing" class="hover:text-blue-400 transition">{{
+        $t("nav.pricing")
+      }}</a>
       <a href="#about" class="hover:text-blue-400 transition">{{
         $t("nav.about")
       }}</a>
@@ -95,6 +98,8 @@
       <a href="#" class="hover:text-blue-400 font-bold transition">{{ $t("nav.home") }}</a>
       <a href="#services" class="hover:text-blue-400 font-bold transition">{{ $t("nav.services") }}</a
       >
+      <a href="#pricing" class="hover:text-blue-400 font-bold transition">{{ $t("nav.pricing") }}</a
+        >
       <a href="#about" class="hover:text-blue-400 font-bold transition">{{ $t("nav.about") }}</a
       >
       <a href="#contact" class="hover:text-blue-400 font-bold transition">{{ $t("nav.contact") }}</a
