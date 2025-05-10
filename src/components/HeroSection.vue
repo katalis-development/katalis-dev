@@ -3,11 +3,13 @@
     <div
       class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
     ></div>
-    <div class="p-20 flex flex-wrap lg:flex-nowrap justify-between">
+    <div class="p-10 lg:p-20 flex flex-wrap lg:flex-nowrap justify-between"  data-aos="fade-up" data-aos-duration="1000">
       <div class="w-full lg:w-2/3 flex flex-col mt-30">
         <div class="mb-20 flex flex-col gap-5">
           <h1
             class="text-4xl lg:text-5xl font-extrabold leading-12 md:leading-13 lg:leading-15 text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-rose-400"
+            data-aos="fade-up" 
+            data-aos-duration="1200"
           >
             {{ $t("hero.title") }}
             <span
@@ -18,6 +20,8 @@
           </h1>
           <p
             class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider"
+            data-aos="fade-up"
+            data-aos-duration="1400"
           >
             {{ $t("hero.subtitle") }}
           </p>

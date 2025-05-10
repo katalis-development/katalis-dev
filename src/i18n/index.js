@@ -17,7 +17,8 @@ const messages = {
       cta: "Get Started",
     },
     services: {
-      title: "Our Services",
+      title: "Our Premium Services",
+      desc: "Experience the best solutions we offer to help your business grow and thrive!",
       webDev: {
         title: "Web Development",
         desc: "Building modern, responsive, and scalable websites with cutting-edge technologies.",
@@ -42,6 +43,10 @@ const messages = {
         title: "Maintenance & Support",
         desc: "Providing continuous updates, monitoring, and technical support to keep you running smoothly.",
       },
+    },
+    pricing: {
+      title: "Our Exclusive Pricing Plans",
+      desc: "Discover the best value for your business with our tailored plans, designed to fit every need and budget.",
     },
     about: {
       title: "About Katalis Dev",
@@ -97,7 +102,8 @@ const messages = {
       cta: "Mulai Sekarang",
     },
     services: {
-      title: "Layanan Kami",
+      title: "Layanan Unggulan Kami",
+      desc: "Nikmati solusi terbaik yang kami tawarkan untuk membantu bisnismu tumbuh dan berkembang!",
       webDev: {
         title: "Pengembangan Web",
         desc: "Membangun situs web modern, responsif, dan skalabel dengan teknologi terkini.",
@@ -122,6 +128,10 @@ const messages = {
         title: "Pemeliharaan & Dukungan",
         desc: "Menyediakan pembaruan berkelanjutan, pemantauan, dan dukungan teknis untuk menjaga Anda tetap berjalan lancar.",
       },
+    },
+    pricing: {
+      title: "Pilih Paket Harga Sesuai Kebutuhanmu",
+      desc: "Temukan paket yang tepat dengan harga terbaik untuk bisnismu, mulai dari yang simple hingga yang lengkap!"
     },
     about: {
       title: "Tentang Katalis Dev",

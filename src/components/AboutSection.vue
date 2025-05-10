@@ -4,10 +4,9 @@
       class="min-h-screen flex items-center justify-center bg-parallax bg-cover bg-center text-white px-6 py-20"
       :class="{ 'bg-fixed': isDesktop }"
     >
-      <div class="max-w-5xl mx-auto text-center">
+      <div class="max-w-5xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
         <h2
-          class="text-4xl md:text-5xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 mb-12"
-        >
+          class="text-4xl md:text-5xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 mb-12">
           {{ $t("about.title") }}
         </h2>
         <p
