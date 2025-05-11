@@ -6,7 +6,7 @@
    <!-- Grid Pattern Background -->
    <div class="absolute inset-0 grid-pattern"></div>
 
-    <div class="max-w-6xl px-4 mx-auto relative z-10">
+    <div class="max-w-6xl px-8 mx-auto relative z-10">
       <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
         <h2
           class="text-4xl md:text-6xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
@@ -14,7 +14,7 @@
           {{ $t("services.title") }}
         </h2>
 
-        <p class="text-gray-300 text-xl">{{ $t("services.desc") }}</p>
+        <p class="text-gray-300 text-lg lg:text-xl">{{ $t("services.desc") }}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div

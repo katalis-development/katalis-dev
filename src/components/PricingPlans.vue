@@ -1,7 +1,7 @@
 <template>
   <section
     id="pricing"
-    class="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-[#060d1d] via-slate-800 to-[#070c16]"
+    class="min-h-screen flex items-center justify-center px-8 py-20 bg-gradient-to-br from-[#060d1d] via-slate-800 to-[#070c16]"
   >
     <div class="max-w-7xl w-full text-center">
       <div
@@ -10,13 +10,13 @@
         data-aos-duration="1000"
       >
         <h2
-          class="text-4xl md:text-5xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
+          class="text-4xl md:text-6xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
         >
           {{ $t("pricing.title") }}
         </h2>
-        <p class="text-gray-300">{{ $t("pricing.desc") }}</p>
+        <p class="text-gray-300 text-xl">{{ $t("pricing.desc") }}</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-2">
         <div
           v-for="(plan, index) in localizedPlans"
           :key="index"

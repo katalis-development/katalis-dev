@@ -1,7 +1,7 @@
 <template>
     <section
       id="about"
-      class="min-h-screen flex items-center justify-center bg-parallax bg-cover bg-center text-white px-6 py-20"
+      class="min-h-screen flex items-center justify-center bg-parallax bg-cover bg-center text-white px-8 py-20"
       :class="{ 'bg-fixed': isDesktop }"
     >
       <div class="max-w-5xl mx-auto text-center">
