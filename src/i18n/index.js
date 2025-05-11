@@ -47,6 +47,40 @@ const messages = {
     pricing: {
       title: "Our Exclusive Pricing Plans",
       desc: "Discover the best value for your business with our tailored plans, designed to fit every need and budget.",
+      plans: {
+        basic: {
+          name: "Basic",
+          description: "Perfect for portfolios or simple websites",
+          features: {
+            0: "1 Landing Page",
+            1: "Responsive Design",
+            2: "7 Days Hosting",
+          },
+        },
+        regular: {
+          name: "Regular",
+          description: "For small businesses & SMEs",
+          features: {
+            0: "Up to 5 Pages",
+            1: "Contact Form",
+            2: "Mobile Friendly & Basic SEO",
+            3: "Free 1 Year Hosting",
+          },
+        },
+        premium: {
+          name: "Premium",
+          description: "Complete solution for professional businesses",
+          features: {
+            0: "Unlimited Pages",
+            1: "Admin Panel + CMS",
+            2: "Payment / API Integration",
+            3: "3 Months Support",
+          },
+        },
+      },
+      discount: "50% Discount",
+      popular: "Most Popular",
+      perProject: "/ project",
     },
     about: {
       title: "About Katalis Dev",
@@ -87,89 +121,124 @@ const messages = {
     },
   },
   id: {
+    // Bahasa Indonesia yang lebih santai dan ramah
     nav: {
       home: "Beranda",
       services: "Layanan",
       pricing: "Harga",
-      about: "Tentang",
-      contact: "Kontak",
+      about: "Tentang Kita",
+      contact: "Hubungi",
       brandName: "Katalis Dev",
     },
     hero: {
-      title: "Mengkatalisasi Transformasi Digital Anda dengan",
+      title: "Bikin Bisnis Kamu Makin Kece dengan",
       subtitle:
-        "Kami menciptakan solusi web modern, skalabel untuk mengangkat merek Anda dan mempercepat kesuksesan Anda.",
-      cta: "Mulai Sekarang",
+        "Kita bikin website keren yang bakal naikin brand kamu ke level berikutnya!",
+      cta: "Yuk, Mulai!",
     },
     services: {
-      title: "Layanan Unggulan Kami",
-      desc: "Nikmati solusi terbaik yang kami tawarkan untuk membantu bisnismu tumbuh dan berkembang!",
+      title: "Layanan Kece Kita",
+      desc: "Coba deh solusi terbaik dari kita buat ngembangin bisnis kamu!",
       webDev: {
-        title: "Pengembangan Web",
-        desc: "Membangun situs web modern, responsif, dan skalabel dengan teknologi terkini.",
+        title: "Bikin Website",
+        desc: "Kita bikinin website keren, responsif, dan gampang diakses pakai teknologi terkini.",
       },
       mobileApps: {
         title: "Aplikasi Mobile",
-        desc: "Menciptakan aplikasi mobile yang indah dan fungsional sesuai kebutuhan Anda.",
+        desc: "Aplikasi yang cantik dan fungsional, pas banget sama kebutuhan kamu.",
       },
       uiux: {
         title: "Desain UI/UX",
-        desc: "Mendesain antarmuka yang berpusat pada pengguna yang menakjubkan dan mudah digunakan.",
+        desc: "Desain antarmuka yang ciamik dan gampang dipake, bikin pengguna betah.",
       },
       seo: {
         title: "Optimasi SEO",
-        desc: "Tingkatkan visibilitas situs web Anda dan peringkat lebih tinggi di mesin pencari secara organik.",
+        desc: "Biar website kamu nongol di halaman pertama pencarian Google!",
       },
       cloud: {
         title: "Integrasi Cloud",
-        desc: "Mengintegrasikan layanan cloud dengan mulus untuk menskalakan dan memodernisasi operasi bisnis Anda.",
+        desc: "Ngebantu bisnis kamu pake layanan cloud dengan mulus buat operasional yang lebih modern.",
       },
       maintenance: {
-        title: "Pemeliharaan & Dukungan",
-        desc: "Menyediakan pembaruan berkelanjutan, pemantauan, dan dukungan teknis untuk menjaga Anda tetap berjalan lancar.",
+        title: "Dukungan & Maintenance",
+        desc: "Selalu update, pantau, dan bantu teknis biar website kamu tetap jalan mulus.",
       },
     },
     pricing: {
-      title: "Pilih Paket Harga Sesuai Kebutuhanmu",
-      desc: "Temukan paket yang tepat dengan harga terbaik untuk bisnismu, mulai dari yang simple hingga yang lengkap!"
+      title: "Pilih Paket Harga yang Cocok",
+      desc: "Ada paket buat semua kebutuhan dan budget, dari yang simpel sampai yang lengkap!",
+      plans: {
+        basic: {
+          name: "Basic",
+          description: "Pas buat portofolio atau website simpel",
+          features: {
+            0: "1 Halaman Landing Page",
+            1: "Desain Keren Responsive",
+            2: "Hosting 7 Hari",
+          },
+        },
+        regular: {
+          name: "Regular",
+          description: "Buat bisnis kecil & UMKM",
+          features: {
+            0: "Sampai 5 Halaman",
+            1: "Form Kontak",
+            2: "Mobile Friendly & SEO Dasar",
+            3: "Gratis Hosting 1 Tahun",
+          },
+        },
+        premium: {
+          name: "Premium",
+          description: "Buat bisnis yang pengen tampil profesional",
+          features: {
+            0: "Halaman Tanpa Batas",
+            1: "Admin Panel + CMS",
+            2: "Integrasi Pembayaran / API",
+            3: "Support 3 Bulan",
+          },
+        },
+      },
+      discount: "Diskon 50%",
+      popular: "Paling Laris!",
+      perProject: "/ proyek",
     },
     about: {
-      title: "Tentang Katalis Dev",
+      title: "Kenalan sama Katalis Dev",
       intro:
-        'Di <span class="font-semibold text-white">Katalis Dev</span>, kami bersemangat membantu bisnis merangkul era digital. Dengan komitmen mendalam terhadap inovasi dan kualitas, kami menciptakan situs web, aplikasi mobile, dan pengalaman digital yang kuat yang mengkatalisasi pertumbuhan dan transformasi Anda.',
+        'Di <span class="font-semibold text-white">Katalis Dev</span>, kita suka banget bantu bisnis masuk ke era digital. Dengan semangat inovasi dan kualitas, kita bikin website keren, aplikasi mobile, dan pengalaman digital yang bakal dorong pertumbuhan bisnismu!',
       vision: {
-        title: "Visi Kami",
-        desc: "Memberdayakan bisnis dengan memberikan solusi digital kelas dunia dan mendorong transformasi yang berdampak.",
+        title: "Visi Kita",
+        desc: "Pengen bantu bisnis kamu tumbuh dengan solusi digital keren yang berdampak.",
       },
       mission: {
-        title: "Misi Kami",
-        desc: "Berinovasi, merancang, dan mengembangkan produk yang tidak hanya memenuhi tetapi melampaui harapan klien dengan teknologi mutakhir.",
+        title: "Misi Kita",
+        desc: "Bikin produk inovatif yang ngga cuma sesuai, tapi lebih dari yang kamu harapkan.",
       },
       values: {
-        title: "Nilai-nilai Kami",
-        desc: "Integritas, inovasi, kolaborasi, dan dorongan tanpa henti untuk keunggulan dalam setiap proyek yang kami lakukan.",
+        title: "Nilai Kita",
+        desc: "Jujur, inovatif, kolaboratif, dan selalu kasih yang terbaik di setiap proyek.",
       },
     },
     contact: {
-      title: "Hubungi Kami",
+      title: "Yuk, Ngobrol!",
       subtitle:
-        "Punya proyek dalam pikiran? Mari kita bangun sesuatu yang luar biasa bersama. Kirimkan pesan dan kami akan segera menghubungi Anda!",
+        "Punya ide proyek? Ayo kita wujudkan bareng! Tinggal kirim pesan, nanti kita hubungin balik secepatnya!",
       name: "Nama",
       email: "Email",
       message: "Pesan",
-      namePlaceholder: "Nama Anda",
-      emailPlaceholder: "Email Anda",
-      messagePlaceholder: "Tulis pesan Anda...",
+      namePlaceholder: "Nama kamu",
+      emailPlaceholder: "Email kamu",
+      messagePlaceholder: "Tulis pesanmu di sini...",
       submit: "Kirim Pesan",
     },
     footer: {
       tagline:
-        "Memimpin jalan dalam inovasi digital, memberikan solusi berkinerja tinggi untuk bisnis di seluruh dunia.",
+        "Jadi pionir inovasi digital, kasih solusi terbaik buat bisnis di seluruh dunia.",
       copyright: "© 2025 Katalis Dev. Hak Cipta Dilindungi.",
-      quickLinks: "Tautan Cepat",
-      followUs: "Ikuti Kami",
+      quickLinks: "Link Cepat",
+      followUs: "Follow Kita",
       crafted:
-        "Dibuat dengan ❤️ oleh Katalis Dev | Dirancang untuk web modern.",
+        "Dibuat dengan ❤️ oleh Katalis Dev | Dirancang buat web zaman now.",
     },
   },
 };
