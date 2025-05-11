@@ -17,7 +17,7 @@
       <!-- Language Switcher -->
       <button
         @click="toggleLanguage"
-        class="text-white hover:text-blue-400 transition flex items-center gap-1"
+        class="text-white hover:text-blue-400 transition flex items-center gap-1 cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@
             d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
           />
         </svg>
-        {{ $i18n.locale === "en" ? "EN" : "ID" }}
+        {{ $i18n.locale === "en" ? "ID" : "EN" }}
       </button>
     </div>
 
@@ -58,7 +58,7 @@
             d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
           />
         </svg>
-        {{ $i18n.locale === "en" ? "EN" : "ID" }}
+        {{ $i18n.locale === "en" ? "ID" : "EN" }}
       </button>
 
       <button @click="toggleMenu" class="text-white focus:outline-none">
@@ -84,20 +84,20 @@
   <div
     v-if="isMenuOpen"
     @click="closeMenu"
-    class="fixed inset-0 z-10 bg-white/5 backdrop-blur-xs transition-all duration-300 md:hidden"
+    class="fixed inset-0 z-20 bg-white/5 backdrop-blur-md transition-all duration-300 md:hidden"
   ></div>
 
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="fixed top-14 w-1/2 left-28 z-20 bg-black/30 rounded-2xl backdrop-blur-xs p-6 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300 md:hidden"
+    class="fixed top-50 w-4/5 left-10 z-20 bg-black/60 rounded-3xl backdrop-blur-xs p-10 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300 md:hidden"
     :class="{ 'opacity-100 scale-100': isMenuOpen }"
   >
-    <a href="#" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.home") }}</a>
-    <a href="#services" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.services") }}</a>
-    <a href="#pricing" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.pricing") }}</a>
-    <a href="#about" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.about") }}</a>
-    <a href="#contact" class="hover:text-blue-400 font-bold transition" @click="closeMenu">{{ $t("nav.contact") }}</a>
+    <a href="#" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1000">{{ $t("nav.home") }}</a>
+    <a href="#services" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1200">{{ $t("nav.services") }}</a>
+    <a href="#pricing" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1400">{{ $t("nav.pricing") }}</a>
+    <a href="#about" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1600">{{ $t("nav.about") }}</a>
+    <a href="#contact" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1800">{{ $t("nav.contact") }}</a>
   </div>
 </template>
 

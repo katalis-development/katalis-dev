@@ -12,39 +12,40 @@
         <div class="flex flex-col items-center">
           <h3
             class="text-2xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-sky-300"
-          >
+            data-aos="fade-up" data-aos-duration="1000"
+            >
             {{ $t("nav.brandName") }}
           </h3>
-          <p class="text-neutral-300 mb-4">
+          <p class="text-neutral-300 mb-4" data-aos="fade-up" data-aos-duration="1200">
             {{ $t("footer.tagline") }}
           </p>
-          <p class="text-neutral-300 text-sm">
+          <p class="text-neutral-300 text-sm" data-aos="fade-up" data-aos-duration="1400">
             {{ $t("footer.copyright") }}
           </p>
         </div>
 
         <!-- Quick Links -->
         <div class="flex flex-col items-center">
-          <h4 class="text-lg font-semibold mb-4 text-neutral-300">
+          <h4 class="text-lg font-semibold mb-4 text-neutral-300" data-aos="fade-up" data-aos-duration="1000">
             {{ $t("footer.quickLinks") }}
           </h4>
           <ul class="text-gray-400 space-y-2">
-            <li>
+            <li data-aos="fade-up" data-aos-duration="1000">
               <a href="#" class="hover:text-teal-400 transition">{{
                 $t("nav.home")
               }}</a>
             </li>
-            <li>
+            <li data-aos="fade-up" data-aos-duration="1100">
               <a href="#" class="hover:text-teal-400 transition">{{
                 $t("nav.services")
               }}</a>
             </li>
-            <li>
+            <li data-aos="fade-up" data-aos-duration="1200">
               <a href="#" class="hover:text-teal-400 transition">{{
                 $t("nav.about")
               }}</a>
             </li>
-            <li>
+            <li data-aos="fade-up" data-aos-duration="1300">
               <a href="#" class="hover:text-teal-400 transition">{{
                 $t("nav.contact")
               }}</a>
@@ -54,11 +55,11 @@
 
         <!-- Social Media -->
         <div class="flex flex-col items-center">
-          <h4 class="text-lg font-semibold mb-4 text-gray-300">
+          <h4 class="text-lg font-semibold mb-4 text-gray-300" data-aos="fade-up" data-aos-duration="1000">
             {{ $t("footer.followUs") }}
           </h4>
           <div class="flex space-x-6 text-gray-400 text-2xl">
-            <a href="#" class="hover:text-teal-400 transition">
+            <a href="#" class="hover:text-teal-400 transition" data-aos="fade-left" data-aos-duration="1200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -77,7 +78,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#" class="hover:text-teal-400 transition">
+            <a href="#" class="hover:text-teal-400 transition" data-aos="fade-left" data-aos-duration="1400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -135,7 +136,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#" class="hover:text-teal-400 transition">
+            <a href="#" class="hover:text-teal-400 transition" data-aos="fade-left" data-aos-duration="1400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -165,7 +166,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#" class="hover:text-teal-400 transition">
+            <a href="#" class="hover:text-teal-400 transition" data-aos="fade-left" data-aos-duration="1500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

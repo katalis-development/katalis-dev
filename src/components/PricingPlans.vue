@@ -27,8 +27,8 @@
             'ring-4 ring-yellow-300 border-yellow-400 scale-105 bg-white/5 shadow-lg':
               plan.popular,
           }"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
+          data-aos="fade-right"
+          :data-aos-delay="index * 300"
         >
           <!-- Badge Diskon -->
           <div
