@@ -2,16 +2,16 @@ import { createI18n } from "vue-i18n";
 
 const messages = {
   en: {
+    brandName: "Katalis Dev",
     nav: {
       home: "Home",
       services: "Services",
       pricing: "Pricing",
       about: "About",
       contact: "Contact",
-      brandName: "Katalis Dev",
     },
     hero: {
-      title: "Catalyzing Your Digital Transformation with",
+      title: "Your Brand Deserves More Than Just a Template",
       subtitle:
         "We craft modern, scalable web solutions to elevate your brand and accelerate your success.",
       cta: "Get Started",
@@ -122,16 +122,16 @@ const messages = {
   },
   id: {
     // Bahasa Indonesia yang lebih santai dan ramah
+    brandName: "Katalis Dev",
     nav: {
       home: "Beranda",
       services: "Layanan",
       pricing: "Harga",
-      about: "Tentang Kita",
-      contact: "Hubungi",
-      brandName: "Katalis Dev",
+      about: "Tentang",
+      contact: "Kontak",
     },
     hero: {
-      title: "Bikin Bisnis Kamu Makin Kece dengan",
+      title: "Brand Kamu Pantas Lebih Dari Sekadar Template",
       subtitle:
         "Kita bikin website keren yang bakal naikin brand kamu ke level berikutnya!",
       cta: "Yuk, Mulai!",

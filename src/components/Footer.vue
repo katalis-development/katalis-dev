@@ -14,7 +14,7 @@
             class="text-2xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-sky-300"
             data-aos="fade-up" data-aos-duration="1000"
             >
-            {{ $t("nav.brandName") }}
+            {{ $t("brandName") }}
           </h3>
           <p class="text-neutral-300 mb-4" data-aos="fade-up" data-aos-duration="1200">
             {{ $t("footer.tagline") }}

@@ -3,23 +3,18 @@
     <div
       class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
     ></div>
-    <div class="p-10 lg:p-20 flex flex-wrap lg:flex-nowrap justify-between"  data-aos="fade-up" data-aos-duration="1000">
-      <div class="w-full lg:w-2/3 flex flex-col mt-30">
-        <div class="mb-20 flex flex-col gap-5">
+    <div class="p-10 lg:p-20 flex flex-wrap lg:flex-nowrap justify-between" data-aos="fade-up" data-aos-duration="1000">
+      <div class="w-full lg:w-2/3 flex flex-col lg:mt-24 mt-20">
+        <div class="lg:mb-12 mb-10 flex flex-col gap-5">
           <h1
-            class="text-4xl lg:text-5xl font-extrabold leading-12 md:leading-13 lg:leading-15 text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-rose-400"
+            class="text-5xl lg:text-8xl font-extrabold leading-12 md:leading-13 lg:leading-22 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-rose-500"
             data-aos="fade-up" 
             data-aos-duration="1200"
           >
             {{ $t("hero.title") }}
-            <span
-              class="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-sky-400 to-sky-400"
-            >
-              {{ $t("nav.brandName") }}
-            </span>
           </h1>
           <p
-            class="text-lg text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider"
+            class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 to-neutral-200 leading-8 lg:leading-5 tracking-wider"
             data-aos="fade-up"
             data-aos-duration="1400"
           >
@@ -27,7 +22,7 @@
           </p>
         </div>
         <a href="#contact"
-          class="px-8 mt-10 animate-pulse z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer"
+          class="px-8 lg:mt-10 animate-pulse z-10 flex items-center gap-2 self-baseline py-3 rounded-full bg-gradient-to-r from-teal-500 via-sky-400 to-indigo-600 text-white font-semibold text-lg shadow-lg hover:opacity-80 transition-opacity duration-300 transform hover:scale-105 cursor-pointer"
         >
           <span>{{ $t("hero.cta") }}</span>
           <svg

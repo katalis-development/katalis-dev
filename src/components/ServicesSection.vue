@@ -1,17 +1,20 @@
 <template>
   <section
     id="services"
-    class="min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-[#060d1d] via-blue-900 to-[#070c16]"
+    class="min-h-screen flex items-center relative justify-center py-20 bg-gradient-to-br from-[#060d1d] via-blue-900 to-[#070c16]"
   >
-    <div class="max-w-6xl px-4 mx-auto">
+   <!-- Grid Pattern Background -->
+   <div class="absolute inset-0 grid-pattern"></div>
+
+    <div class="max-w-6xl px-4 mx-auto relative z-10">
       <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
         <h2
-          class="text-4xl md:text-5xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
+          class="text-4xl md:text-6xl py-2 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600"
         >
           {{ $t("services.title") }}
         </h2>
 
-        <p class="text-gray-300">{{ $t("services.desc") }}</p>
+        <p class="text-gray-300 text-xl">{{ $t("services.desc") }}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
@@ -155,5 +158,12 @@ const serviceCards = [
 </script>
 
 <style scoped>
-/* You can add custom styles if needed */
+  .grid-pattern {
+    background: 
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px) 0 0,
+      linear-gradient(180deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px) 0 0;
+    background-size: 20px 20px;
+    opacity: 0.2; /* Fade effect */
+    z-index: 0;
+  }
 </style>
