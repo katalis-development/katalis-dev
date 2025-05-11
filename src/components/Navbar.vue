@@ -91,14 +91,55 @@
   <div
     id="mobile-menu"
     class="fixed top-50 w-4/5 left-10 z-20 bg-black/60 rounded-3xl backdrop-blur-xs p-10 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300 md:hidden"
-    :class="{ 'opacity-100 scale-100': isMenuOpen }"
+    :class="{ 'opacity-100 scale-100 pointer-events-auto': isMenuOpen, 'pointer-events-none': !isMenuOpen }"
   >
-    <a href="#" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1000">{{ $t("nav.home") }}</a>
-    <a href="#services" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1200">{{ $t("nav.services") }}</a>
-    <a href="#pricing" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1400">{{ $t("nav.pricing") }}</a>
-    <a href="#about" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1600">{{ $t("nav.about") }}</a>
-    <a href="#contact" class="hover:text-blue-400 font-bold transition" @click="closeMenu" data-aos="fade-left" data-aos-duration="1800">{{ $t("nav.contact") }}</a>
+    <a
+      href="#"
+      class="hover:text-blue-400 font-bold transition"
+      @click="closeMenu"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
+      {{ $t("nav.home") }}
+    </a>
+    <a
+      href="#services"
+      class="hover:text-blue-400 font-bold transition"
+      @click="closeMenu"
+      data-aos="fade-left"
+      data-aos-duration="1200"
+    >
+      {{ $t("nav.services") }}
+    </a>
+    <a
+      href="#pricing"
+      class="hover:text-blue-400 font-bold transition"
+      @click="closeMenu"
+      data-aos="fade-left"
+      data-aos-duration="1400"
+    >
+      {{ $t("nav.pricing") }}
+    </a>
+    <a
+      href="#about"
+      class="hover:text-blue-400 font-bold transition"
+      @click="closeMenu"
+      data-aos="fade-left"
+      data-aos-duration="1600"
+    >
+      {{ $t("nav.about") }}
+    </a>
+    <a
+      href="#contact"
+      class="hover:text-blue-400 font-bold transition"
+      @click="closeMenu"
+      data-aos="fade-left"
+      data-aos-duration="1800"
+    >
+      {{ $t("nav.contact") }}
+    </a>
   </div>
+
 </template>
 
 <script>
