@@ -1,19 +1,37 @@
 <template>
   <nav
-    :class="['fixed max-w-screen z-50 transition-all duration-1000 bg-white/15 px-5 lg:px-10 py-4 shadow flex items-center justify-between backdrop-blur-sm', isScrolled ? 'my-0 w-full rounded-none' : 'rounded-3xl my-7 mx-8 lg:ml-28 w-10/12']"
+    :class="[
+      'fixed max-w-screen z-50 transition-all duration-1000 bg-white/15 px-5 lg:px-10 py-4 shadow flex items-center justify-between backdrop-blur-sm',
+      isScrolled
+        ? 'my-0 w-full rounded-none'
+        : 'rounded-3xl my-7 mx-8 lg:ml-28 w-10/12',
+    ]"
   >
     <a href="#" class="flex items-center justify-center gap-1">
-      <img src="/icon.svg" class="w-8">  <!-- &lt;/&gt; -->
-      <p class="text-lg lg:text-xl text-white "> Katalis Dev</p>
+      <img src="/icon.svg" class="w-8" />
+      <!-- &lt;/&gt; -->
+      <p class="text-lg lg:text-xl text-white">Katalis Dev</p>
     </a>
-    
+
     <!-- Desktop Menu -->
     <div class="hidden md:flex gap-8 text-xl items-center">
-      <a href="#" class="text-neutral-300 hover:text-white transition">{{ $t("nav.home") }}</a>
-      <a href="#services" class="text-neutral-300 hover:text-white transition">{{ $t("nav.services") }}</a>
-      <a href="#pricing" class="text-neutral-300 hover:text-white transition">{{ $t("nav.pricing") }}</a>
-      <a href="#about" class="text-neutral-300 hover:text-white transition">{{ $t("nav.about") }}</a>
-      <a href="#contact" class="text-neutral-300 hover:text-white transition">{{ $t("nav.contact") }}</a>
+      <a href="#" class="text-neutral-300 hover:text-white transition">{{
+        $t("nav.home")
+      }}</a>
+      <a
+        href="#services"
+        class="text-neutral-300 hover:text-white transition"
+        >{{ $t("nav.services") }}</a
+      >
+      <a href="#pricing" class="text-neutral-300 hover:text-white transition">{{
+        $t("nav.pricing")
+      }}</a>
+      <a href="#about" class="text-neutral-300 hover:text-white transition">{{
+        $t("nav.about")
+      }}</a>
+      <a href="#contact" class="text-neutral-300 hover:text-white transition">{{
+        $t("nav.contact")
+      }}</a>
 
       <!-- Language Switcher -->
       <button
@@ -39,11 +57,25 @@
     </div>
 
     <div class="hidden md:block">
-      <a href="#contact" class="flex gap-2 items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
-        Let's Talk
+      <a
+        href="#contact"
+        class="flex gap-2 items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600"
+      >
+        {{ $t("nav.letsTalk") }}
         <span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+            />
           </svg>
         </span>
       </a>
@@ -74,22 +106,28 @@
       </button>
 
       <button @click="toggleMenu" class="lg:hidden flex gap-1 flex-col z-50">
-        <div :class="[
-          'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-6 rounded-sm',
-          isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
-        ]"></div>
-        <div :class="[
-          'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-5 rounded-sm',
-          isMenuOpen ? 'opacity-0' : 'opacity-100'
-        ]"></div>
-        <div :class="[
-          'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-4 rounded-sm',
-          isMenuOpen ? '-rotate-45 -translate-y-2 w-6' : 'translate-y-0.5'
-        ]"></div>
+        <div
+          :class="[
+            'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-6 rounded-sm',
+            isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5',
+          ]"
+        ></div>
+        <div
+          :class="[
+            'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-5 rounded-sm',
+            isMenuOpen ? 'opacity-0' : 'opacity-100',
+          ]"
+        ></div>
+        <div
+          :class="[
+            'bg-neutral-600 dark:bg-white block transition-all duration-600 ease-out h-0.5 w-4 rounded-sm',
+            isMenuOpen ? '-rotate-45 -translate-y-2 w-6' : 'translate-y-0.5',
+          ]"
+        ></div>
       </button>
     </div>
   </nav>
-     <!-- Fullscreen Overlay -->
+  <!-- Fullscreen Overlay -->
   <div
     v-if="isMenuOpen"
     @click="closeMenu"
@@ -100,7 +138,10 @@
   <div
     id="mobile-menu"
     class="fixed top-50 w-4/5 left-10 z-20 bg-black/60 rounded-3xl backdrop-blur-xs p-10 flex flex-col gap-6 text-center opacity-0 scale-95 transform transition-all duration-300 md:hidden"
-    :class="{ 'opacity-100 scale-100 pointer-events-auto': isMenuOpen, 'pointer-events-none': !isMenuOpen }"
+    :class="{
+      'opacity-100 scale-100 pointer-events-auto': isMenuOpen,
+      'pointer-events-none': !isMenuOpen,
+    }"
   >
     <a
       href="#"
@@ -147,14 +188,28 @@
     >
       {{ $t("nav.contact") }}
     </a>
-    <a href="#contact" class="flex gap-2 justify-center items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
-        Let's Talk
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
-        </span>
-      </a>
+    <a
+      href="#contact"
+      class="flex gap-2 justify-center items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600"
+    >
+      {{ $t("nav.letsTalk") }}
+      <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+          />
+        </svg>
+      </span>
+    </a>
   </div>
 </template>
 
@@ -179,19 +234,18 @@ export default {
       document.body.style.overflow = "auto";
     },
     handleScroll() {
-      this.isScrolled = window.scrollY > 20
+      this.isScrolled = window.scrollY > 20;
     },
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll);
   },
   beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
 
 <style scoped>
 /* You can add scoped styling here if needed */
-
 </style>

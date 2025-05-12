@@ -52,8 +52,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-2">
+        <!-- Basic and Regular plans remain the same -->
         <div
-          v-for="(plan, index) in localizedPlans"
+          v-for="(plan, index) in standardPlans"
           :key="index"
           class="glass relative rounded-2xl p-8 text-left border transition duration-300 hover:scale-105 hover:shadow-2xl hover:border-teal-400"
           :class="{
@@ -149,6 +150,62 @@
             </li>
           </ul>
         </div>
+
+        <!-- Custom Package Card (Premium replacement) -->
+        <div
+          class="glass relative rounded-2xl p-8 text-left border border-indigo-500 transition duration-300 hover:scale-105 hover:shadow-2xl bg-white/5"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          <!-- Badge Tag -->
+          <div
+            class="absolute top-4 right-4 bg-indigo-600 text-xs px-3 py-1 rounded-full text-white font-medium"
+          >
+            {{ $t("pricing.planTags.custom") }}
+          </div>
+
+          <!-- Title -->
+          <h2 class="text-2xl font-semibold mb-2 text-white">
+            {{ $t("pricing.customPlan.name") }}
+          </h2>
+
+          <p class="text-gray-300 mb-4">
+            {{ $t("pricing.customPlan.description") }}
+          </p>
+
+          <!-- Main features section (from image example) -->
+          <div class="space-y-4 my-6">
+            <div class="text-lg text-teal-400 font-medium">
+              <span class="text-teal-300">KatalisDev</span
+              ><span class="text-gray-300"
+                >, {{ $t("pricing.customPlan.tagline") }}</span
+              >
+            </div>
+
+            <div class="text-sm text-gray-200">
+              <p class="mb-2">
+                <span class="text-teal-300">Bisa</span>
+                {{ $t("pricing.customPlan.service1") }}
+              </p>
+              <p class="mb-2">{{ $t("pricing.customPlan.service2") }}</p>
+              <p class="mb-2">
+                <span class="text-teal-300">Bisa</span>
+                {{ $t("pricing.customPlan.service3") }}
+              </p>
+              <p class="mb-4">{{ $t("pricing.customPlan.service4") }}</p>
+            </div>
+          </div>
+
+          <!-- Pricing estimate -->
+          <div class="mt-8 mb-4">
+            <p class="text-gray-300 text-center">
+              {{ $t("pricing.customPlan.estimateTitle") }}
+            </p>
+            <p class="text-2xl text-yellow-300 font-bold text-center my-2">
+              {{ $t("pricing.customPlan.estimateMessage") }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -160,7 +217,7 @@ export default {
   data() {
     return {
       billingPeriod: "monthly", // 'monthly' atau 'annual'
-      planTypes: ["basic", "regular", "premium"],
+      planTypes: ["basic", "regular"],
       planPrices: {
         basic: {
           price: 11520000, // Rp11.520.000/tahun
@@ -176,18 +233,11 @@ export default {
           popular: true,
           tag: this.$i18n.locale === "id" ? "Terlaris" : "Best Seller",
         },
-        premium: {
-          price: 48000000, // Rp48.000.000/tahun
-          originalPrice: 76800000, // Rp76.800.000/tahun
-          discount: true,
-          popular: false,
-          tag: this.$i18n.locale === "id" ? "Lengkap" : "Complete",
-        },
       },
     };
   },
   computed: {
-    localizedPlans() {
+    standardPlans() {
       return this.planTypes.map((type) => {
         const priceInfo = this.planPrices[type];
         return {

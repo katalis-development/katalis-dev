@@ -9,6 +9,7 @@ const messages = {
       pricing: "Pricing",
       about: "About",
       contact: "Contact",
+      letsTalk: "Let's Talk",
     },
     hero: {
       title: "Your Brand Deserves More Than Just a Template",
@@ -53,11 +54,24 @@ const messages = {
       planTags: {
         economical: "Economical",
         bestSeller: "Best Seller",
-        complete: "Complete",
+        complete: "Premium",
+        custom: "Design Pro",
       },
       billingOptions: {
         monthly: "Monthly",
         yearly: "Yearly",
+      },
+      customPlan: {
+        name: "Custom Design",
+        description: "High-end tailored solutions for your best needs",
+        tagline: "ready to make your brand pop?",
+        service1: "creates designs from scratch, custom sketches",
+        service2: "Pricing depends on your requested features",
+        service3: "can improve with the latest technology",
+        service4: "Yearly or quarterly maintenance available",
+        estimateTitle: "Price Estimate",
+        estimateMessage: "Let's chat about what you need! 😊",
+        buttonSubtext: "Let's chat to see if we're a good match!",
       },
       plans: {
         basic: {
@@ -134,6 +148,7 @@ const messages = {
       emailPlaceholder: "Your Email",
       messagePlaceholder: "Write your message...",
       submit: "Send Message",
+      letsTalk: "Let's Talk 👋",
     },
     footer: {
       tagline:
@@ -152,6 +167,7 @@ const messages = {
       pricing: "Harga",
       about: "Tentang",
       contact: "Kontak",
+      letsTalk: "Yuk Ngobrol",
     },
     hero: {
       title: "Brand Kamu Pantas Lebih Dari Sekadar Template",
@@ -196,11 +212,24 @@ const messages = {
       planTags: {
         economical: "Ekonomis",
         bestSeller: "Terlaris",
-        complete: "Lengkap",
+        complete: "Premium",
+        custom: "Design Pro",
       },
       billingOptions: {
         monthly: "Bulanan",
         yearly: "Tahunan",
+      },
+      customPlan: {
+        name: "Design Custom",
+        description: "Solusi premium khusus untuk kebutuhan terbaik anda",
+        tagline: "Mau brand kamu lebih kece?",
+        service1: "design eksklusif dari awal dengan konsep unik",
+        service2: "Solusi khusus sesuai kebutuhan dan visi bisnis Anda",
+        service3: "improve dengan teknologi terkini",
+        service4: "Paket maintenance fleksibel (3 atau 12 bulan)",
+        estimateTitle: "Investasi bisnis Anda",
+        estimateMessage: "Yuk ngobrol tentang kebutuhanmu! 😊",
+        buttonSubtext: "Mari diskusikan kebutuhan Anda bersama kami",
       },
       plans: {
         basic: {
@@ -278,6 +307,7 @@ const messages = {
       emailPlaceholder: "Email kamu",
       messagePlaceholder: "Tulis pesanmu di sini...",
       submit: "Kirim Pesan",
+      letsTalk: "Ngobrol Yuk 👋",
     },
     footer: {
       tagline:
