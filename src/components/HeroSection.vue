@@ -3,11 +3,11 @@
     <div
       class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
     ></div>
-    <div class="p-10 lg:p-20 flex flex-wrap lg:flex-nowrap justify-between" data-aos="fade-up" data-aos-duration="1000">
+    <div class="p-10 lg:p-20 flex gap-20 flex-wrap lg:flex-nowrap justify-between" data-aos="fade-up" data-aos-duration="1000">
       <div class="w-full lg:w-2/3 flex flex-col lg:mt-24 mt-20">
         <div class="lg:mb-12 mb-10 flex flex-col gap-5">
           <h1
-            class="text-5xl lg:text-8xl font-extrabold leading-12 md:leading-13 lg:leading-22 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-rose-500"
+            class="text-5xl lg:text-6xl font-extrabold leading-12 md:leading-13 lg:leading-22 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-600 to-rose-500"
             data-aos="fade-up" 
             data-aos-duration="1200"
           >

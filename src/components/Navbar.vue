@@ -1,23 +1,24 @@
 <template>
   <nav
-    class="fixed z-30 w-full bg-black/15 backdrop-blur-sm px-10 py-4 shadow flex items-center justify-between"
+    :class="['fixed max-w-screen z-50 transition-all duration-2000 bg-white/15 px-10 py-4 shadow flex items-center justify-between backdrop-blur-sm', isScrolled ? 'my-0 w-full rounded-none' : 'rounded-3xl my-7 mx-8 lg:ml-28 w-10/12']"
   >
-    <a href="#" class="text-lg lg:text-2xl font-bold text-white">
-      Katalis Dev &lt;/&gt;
+    <a href="#" class="flex items-center justify-center gap-2">
+      <img src="/icon.svg" class="w-8">  <!-- &lt;/&gt; -->
+      <span class="text-lg lg:text-lg font-bold text-white ">Katalis Dev</span>
     </a>
-
+    
     <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-8 items-center">
-      <a href="#" class="hover:text-blue-400 transition">{{ $t("nav.home") }}</a>
-      <a href="#services" class="hover:text-blue-400 transition">{{ $t("nav.services") }}</a>
-      <a href="#pricing" class="hover:text-blue-400 transition">{{ $t("nav.pricing") }}</a>
-      <a href="#about" class="hover:text-blue-400 transition">{{ $t("nav.about") }}</a>
-      <a href="#contact" class="hover:text-blue-400 transition">{{ $t("nav.contact") }}</a>
+    <div class="hidden md:flex gap-8 text-xl items-center">
+      <a href="#" class="text-neutral-300 hover:text-white transition">{{ $t("nav.home") }}</a>
+      <a href="#services" class="text-neutral-300 hover:text-white transition">{{ $t("nav.services") }}</a>
+      <a href="#pricing" class="text-neutral-300 hover:text-white transition">{{ $t("nav.pricing") }}</a>
+      <a href="#about" class="text-neutral-300 hover:text-white transition">{{ $t("nav.about") }}</a>
+      <a href="#contact" class="text-neutral-300 hover:text-white transition">{{ $t("nav.contact") }}</a>
 
       <!-- Language Switcher -->
       <button
         @click="toggleLanguage"
-        class="text-white hover:text-blue-400 transition flex items-center gap-1 cursor-pointer"
+        class="text-neutral-300 hover:text-white transition flex items-center gap-1 cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +36,12 @@
         </svg>
         {{ $i18n.locale === "en" ? "ID" : "EN" }}
       </button>
+    </div>
+
+    <div class="hidden md:block">
+      <a href="#contact" class="px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
+        Let's Talk
+      </a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -79,8 +86,7 @@
       </button>
     </div>
   </nav>
-
-  <!-- Fullscreen Overlay -->
+     <!-- Fullscreen Overlay -->
   <div
     v-if="isMenuOpen"
     @click="closeMenu"
@@ -138,8 +144,10 @@
     >
       {{ $t("nav.contact") }}
     </a>
+    <a href="#contact" class="px-8 py-3 text-lg font-semibold rounded-xl border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
+        Let's Talk
+    </a>
   </div>
-
 </template>
 
 <script>
@@ -147,6 +155,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
+      isScrolled: false,
     };
   },
   methods: {
@@ -161,10 +170,20 @@ export default {
       this.isMenuOpen = false;
       document.body.style.overflow = "auto";
     },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 20
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
 };
 </script>
 
 <style scoped>
 /* You can add scoped styling here if needed */
+
 </style>
