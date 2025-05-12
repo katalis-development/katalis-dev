@@ -1,10 +1,10 @@
 <template>
   <nav
-    :class="['fixed max-w-screen z-50 transition-all duration-2000 bg-white/15 px-10 py-4 shadow flex items-center justify-between backdrop-blur-sm', isScrolled ? 'my-0 w-full rounded-none' : 'rounded-3xl my-7 mx-8 lg:ml-28 w-10/12']"
+    :class="['fixed max-w-screen z-50 transition-all duration-2000 bg-white/15 px-5 lg:px-10 py-4 shadow flex items-center justify-between backdrop-blur-sm', isScrolled ? 'my-0 w-full rounded-none' : 'rounded-3xl my-7 mx-8 lg:ml-28 w-10/12']"
   >
-    <a href="#" class="flex items-center justify-center gap-2">
+    <a href="#" class="flex items-center justify-center gap-1">
       <img src="/icon.svg" class="w-8">  <!-- &lt;/&gt; -->
-      <span class="text-lg lg:text-lg font-bold text-white ">Katalis Dev</span>
+      <p class="text-lg lg:text-xl text-white "> Katalis Dev</p>
     </a>
     
     <!-- Desktop Menu -->
@@ -39,13 +39,18 @@
     </div>
 
     <div class="hidden md:block">
-      <a href="#contact" class="px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
+      <a href="#contact" class="flex gap-2 items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
         Let's Talk
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </span>
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="flex gap-3 md:hidden">
+    <div class="flex items-center gap-5 md:hidden">
       <!-- Language Switcher -->
       <button
         @click="toggleLanguage"
@@ -68,21 +73,19 @@
         {{ $i18n.locale === "en" ? "ID" : "EN" }}
       </button>
 
-      <button @click="toggleMenu" class="text-white focus:outline-none">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-7 h-7"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 8h16M4 16h16"
-          />
-        </svg>
+      <button @click="toggleMenu" class="lg:hidden flex gap-1 flex-col z-50">
+        <div :class="[
+          'bg-neutral-600 dark:bg-white block transition-all duration-800 ease-out h-0.5 w-6 rounded-sm',
+          isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+        ]"></div>
+        <div :class="[
+          'bg-neutral-600 dark:bg-white block transition-all duration-800 ease-out h-0.5 w-5 rounded-sm',
+          isMenuOpen ? 'opacity-0' : 'opacity-100'
+        ]"></div>
+        <div :class="[
+          'bg-neutral-600 dark:bg-white block transition-all duration-800 ease-out h-0.5 w-4 rounded-sm',
+          isMenuOpen ? '-rotate-45 -translate-y-2 w-6' : 'translate-y-0.5'
+        ]"></div>
       </button>
     </div>
   </nav>
@@ -144,9 +147,14 @@
     >
       {{ $t("nav.contact") }}
     </a>
-    <a href="#contact" class="px-8 py-3 text-lg font-semibold rounded-xl border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
+    <a href="#contact" class="flex gap-2 justify-center items-center px-8 py-3 text-lg font-semibold rounded-lg border-white bg-linear-to-r from-cyan-700 via-blue-500 to-indigo-600">
         Let's Talk
-    </a>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </span>
+      </a>
   </div>
 </template>
 
