@@ -184,12 +184,16 @@
 
             <div class="text-sm text-gray-200">
               <p class="mb-2">
-                <span class="text-teal-300">Bisa</span>
+                <span class="text-teal-300">{{
+                  $t("pricing.customPlan.canDo")
+                }}</span>
                 {{ $t("pricing.customPlan.service1") }}
               </p>
               <p class="mb-2">{{ $t("pricing.customPlan.service2") }}</p>
               <p class="mb-2">
-                <span class="text-teal-300">Bisa</span>
+                <span class="text-teal-300">{{
+                  $t("pricing.customPlan.canDo")
+                }}</span>
                 {{ $t("pricing.customPlan.service3") }}
               </p>
               <p class="mb-4">{{ $t("pricing.customPlan.service4") }}</p>
