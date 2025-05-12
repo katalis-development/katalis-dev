@@ -81,7 +81,7 @@ const messages = {
           features: {
             0: "3 Page Responsive Website",
             1: "Basic Contact Form",
-            2: "6 Months Free Hosting",
+            2: "1 Months Free Hosting",
             3: "1 Minor Revision",
           },
         },
@@ -240,7 +240,7 @@ const messages = {
           features: {
             0: "Website 3 Halaman Responsif",
             1: "Form Kontak Dasar",
-            2: "Gratis Hosting 6 Bulan",
+            2: "Gratis Hosting 1 Bulan",
             3: "1 Revisi Minor",
           },
         },

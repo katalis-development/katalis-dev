@@ -271,10 +271,22 @@ export default {
       let i = 0;
 
       while (true) {
-        const feature = this.$t(`pricing.plans.${planType}.features.${i}`);
+        let feature = this.$t(`pricing.plans.${planType}.features.${i}`);
+
+        if (planType === "basic" && i === 2) {
+          if (this.billingPeriod === "annual") {
+            if (this.$i18n.locale === "id") {
+              feature = "Gratis Hosting 1 Tahun";
+            } else {
+              feature = "1 Year Free Hosting";
+            }
+          }
+        }
+
         if (feature === `pricing.plans.${planType}.features.${i}`) {
           break;
         }
+
         features.push(feature);
         i++;
       }
