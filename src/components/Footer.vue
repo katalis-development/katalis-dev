@@ -42,6 +42,11 @@
             </li>
             <li data-aos="fade-up" data-aos-duration="1200">
               <a href="#" class="hover:text-teal-400 transition">{{
+                $t("nav.pricing")
+              }}</a>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="1200">
+              <a href="#" class="hover:text-teal-400 transition">{{
                 $t("nav.about")
               }}</a>
             </li>
