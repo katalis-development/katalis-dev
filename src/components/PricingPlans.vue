@@ -45,7 +45,7 @@
               v-if="billingPeriod === 'annual'"
               class="absolute -top-3 -right-2 bg-green-500 text-xs px-2 py-0.5 rounded-full text-white whitespace-nowrap"
             >
-              {{ $t("pricing.save") }} 20%
+              {{ $t("pricing.save") }}
             </span>
           </button>
         </div>
@@ -117,7 +117,7 @@
               v-if="billingPeriod === 'annual'"
               class="text-sm text-gray-400 mb-4"
             >
-              {{ formatRupiah(Math.round(plan.price / 12)) }} / bulan
+              {{ formatRupiah(Math.round(plan.price / 12)) }} {{ $t("pricing.perMonth") }}
             </p>
           </div>
           <div v-else>
@@ -139,7 +139,7 @@
               v-if="billingPeriod === 'annual'"
               class="text-sm text-gray-400 mb-4"
             >
-              {{ formatRupiah(Math.round(plan.price / 12)) }} / bulan
+              {{ formatRupiah(Math.round(plan.price / 12)) }} {{ $t("pricing.perMonth") }}
             </p>
           </div>
 
@@ -215,112 +215,111 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "PricingPlans",
-  data() {
-    return {
-      billingPeriod: "monthly", // 'monthly' atau 'annual'
-      planTypes: ["basic", "regular"],
-      planPrices: {
-        basic: {
-          price: 11520000, // Rp11.520.000/tahun
-          originalPrice: 23040000, // Rp23.040.000/tahun
-          discount: true,
-          popular: false,
-          tag: this.$i18n.locale === "id" ? "Ekonomis" : "Economical",
-        },
-        regular: {
-          price: 24000000, // Rp24.000.000/tahun
-          originalPrice: 48000000, // Rp48.000.000/tahun
-          discount: true,
-          popular: true,
-          tag: this.$i18n.locale === "id" ? "Terlaris" : "Best Seller",
-        },
-      },
+<script setup>
+  import { ref, computed, watch, onMounted } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
+  const { t, locale } = useI18n();
+
+  const billingPeriod = ref('monthly'); // atau 'annual'
+  const planTypes = ['basic', 'regular'];
+
+  const planPrices = ref({
+    basic: {
+      price: 1225000,
+      originalPrice: 3500000,
+      discount: true,
+      popular: false,
+      tag: locale.value === 'id' ? 'Ekonomis' : 'Economical',
+    },
+    regular: {
+      price: 4500000,
+      originalPrice: 6000000,
+      discount: true,
+      popular: true,
+      tag: locale.value === 'id' ? 'Terlaris' : 'Best Seller',
+    },
+  });
+
+  function formatRupiah(value) {
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      minimumFractionDigits: 0,
+    }).format(value);
+  }
+
+  function getTagKey(planType) {
+    const tagMap = {
+      basic: 'economical',
+      regular: 'bestSeller',
+      premium: 'complete',
     };
-  },
-  computed: {
-    standardPlans() {
-      return this.planTypes.map((type) => {
-        const priceInfo = this.planPrices[type];
-        return {
-          key: type,
-          name: this.$t(`pricing.plans.${type}.name`),
-          price: priceInfo.price,
-          originalPrice: priceInfo.originalPrice,
-          description: this.$t(`pricing.plans.${type}.description`),
-          features: this.getFeatures(type),
-          discount: priceInfo.discount,
-          popular: priceInfo.popular,
-          tag: this.$t(`pricing.planTags.${this.getTagKey(type)}`),
-        };
-      });
-    },
-  },
-  methods: {
-    formatRupiah(value) {
-      return new Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        minimumFractionDigits: 0,
-      }).format(value);
-    },
-    getFeatures(planType) {
-      const features = [];
-      let i = 0;
+    return tagMap[planType];
+  }
 
-      while (true) {
-        let feature = this.$t(`pricing.plans.${planType}.features.${i}`);
+  function getFeatures(planType) {
+    const features = [];
+    let i = 0;
 
-        if (planType === "basic" && i === 2) {
-          if (this.billingPeriod === "annual") {
-            if (this.$i18n.locale === "id") {
-              feature = "Gratis Hosting 1 Tahun";
-            } else {
-              feature = "1 Year Free Hosting";
-            }
-          }
+    while (true) {
+      let feature = t(`pricing.plans.${planType}.features.${i}`);
+
+      // Custom fitur untuk basic annual
+      if (planType === 'basic' && i === 2) {
+        if (billingPeriod.value === 'annual') {
+          feature = locale.value === 'id'
+            ? 'Gratis Hosting 1 Tahun'
+            : '1 Year Free Hosting';
         }
-
-        if (feature === `pricing.plans.${planType}.features.${i}`) {
-          break;
-        }
-
-        features.push(feature);
-        i++;
       }
 
-      return features;
-    },
-    getTagKey(planType) {
-      const tagMap = {
-        basic: "economical",
-        regular: "bestSeller",
-        premium: "complete",
+      // Stop jika key tidak ditemukan
+      if (feature === `pricing.plans.${planType}.features.${i}`) {
+        break;
+      }
+
+      features.push(feature);
+      i++;
+    }
+
+    return features;
+  }
+
+  const standardPlans = computed(() =>
+    planTypes.map((type) => {
+      const priceInfo = planPrices.value[type];
+      return {
+        key: type,
+        name: t(`pricing.plans.${type}.name`),
+        price: priceInfo.price,
+        originalPrice: priceInfo.originalPrice,
+        description: t(`pricing.plans.${type}.description`),
+        features: getFeatures(type),
+        discount: priceInfo.discount,
+        popular: priceInfo.popular,
+        tag: t(`pricing.planTags.${getTagKey(type)}`),
       };
-      return tagMap[planType];
-    },
-  },
-  watch: {
-    "$i18n.locale"() {
-      Object.keys(this.planPrices).forEach((key) => {
-        const planType = key;
-        const tagKey = this.getTagKey(planType);
-        this.planPrices[planType].tag = this.$t(`pricing.planTags.${tagKey}`);
-      });
-      this.$forceUpdate();
-    },
-  },
-  created() {
-    Object.keys(this.planPrices).forEach((key) => {
-      const planType = key;
-      const tagKey = this.getTagKey(planType);
-      this.planPrices[planType].tag = this.$t(`pricing.planTags.${tagKey}`);
+    })
+  );
+
+  // Watcher: update tag saat locale berubah
+  watch(locale, () => {
+    Object.keys(planPrices.value).forEach((key) => {
+      const tagKey = getTagKey(key);
+      planPrices.value[key].tag = t(`pricing.planTags.${tagKey}`);
     });
-  },
-};
+  });
+
+  // Initial tag update saat component mount
+  onMounted(() => {
+    Object.keys(planPrices.value).forEach((key) => {
+      const tagKey = getTagKey(key);
+      planPrices.value[key].tag = t(`pricing.planTags.${tagKey}`);
+    });
+  });
 </script>
+
 
 <style scoped>
 body {

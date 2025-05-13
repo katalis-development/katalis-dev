@@ -79,10 +79,10 @@ const messages = {
           name: "Basic",
           description: "Cost-effective solution for new businesses",
           features: {
-            0: "3 Page Responsive Website",
+            0: "1 Page Responsive Website",
             1: "Basic Contact Form",
-            2: "1 Months Free Hosting",
-            3: "1 Minor Revision",
+            2: "Free Hosting 1 Month",
+            3: "1 Time Revision",
           },
         },
         regular: {
@@ -119,7 +119,7 @@ const messages = {
       annualBilling: "Annual Billing",
       perYear: "/ year",
       perMonth: "/ month",
-      save: "Save",
+      save: "Save 50%",
     },
     about: {
       title: "About Katalis Dev",
