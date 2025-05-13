@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen hero-bg relative safe-top">
+  <section class="min-h-screen hero-bg relative safe-top">
     <div
       class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent py-50"
     ></div>
