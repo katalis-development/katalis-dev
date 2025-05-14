@@ -21,8 +21,8 @@
       <div class="flex justify-center mb-12">
         <div class="relative bg-white/10 rounded-full p-1 inline-flex">
           <button
-            @click="billingPeriod = 'monthly'"
-            class="py-2 px-6 rounded-full text-sm font-medium transition-all duration-200"
+             @click="setBillingPeriod('monthly')"
+            class="py-2 cursor-pointer px-6 rounded-full text-sm font-medium transition-all duration-200"
             :class="
               billingPeriod === 'monthly'
                 ? 'bg-blue-500 text-white shadow-lg'
@@ -32,8 +32,8 @@
             {{ $t("pricing.billingOptions.monthly") }}
           </button>
           <button
-            @click="billingPeriod = 'annual'"
-            class="py-2 px-6 rounded-full text-sm font-medium transition-all duration-200 relative"
+             @click="setBillingPeriod('annual')"
+            class="py-2 cursor-pointer px-6 rounded-full text-sm font-medium transition-all duration-200 relative"
             :class="
               billingPeriod === 'annual'
                 ? 'bg-blue-500 text-white shadow-lg'
@@ -43,9 +43,9 @@
             <span>{{ $t("pricing.billingOptions.yearly") }}</span>
             <span
               v-if="billingPeriod === 'annual'"
-              class="absolute -top-3 -right-2 bg-green-500 text-xs px-2 py-0.5 rounded-full text-white whitespace-nowrap"
+              class="absolute -top-4 -right-2 bg-green-500 text-xs px-2 py-0.5 rounded-full text-white whitespace-nowrap"
             >
-              {{ $t("pricing.save") }}
+              {{ $t("pricing.annualSave") }}
             </span>
           </button>
         </div>
@@ -73,6 +73,7 @@
           >
             {{ plan.tag }}
           </div>
+          
 
           <!-- Badge Popular -->
           <div
@@ -83,7 +84,13 @@
           </div>
 
           <h2 class="text-2xl font-semibold mb-2">{{ plan.name }}</h2>
-
+          <!-- Badge Discount -->
+          <span
+              
+              class=" bg-green-500 text-xs px-2 py-1 rounded-full text-white font-semibold whitespace-nowrap"
+            >
+              {{ $t("pricing.save") }} {{ plan.discountAmount }}%  
+          </span>
           <div v-if="plan.discount">
             <p class="text-xl text-white/70 mb-1 line-through">
               {{
@@ -176,10 +183,7 @@
           <!-- Main features section (from image example) -->
           <div class="space-y-4 my-6">
             <div class="text-lg text-teal-400 font-medium">
-              <span class="text-teal-300">KatalisDev</span
-              ><span class="text-gray-300"
-                >, {{ $t("pricing.customPlan.tagline") }}</span
-              >
+              <span class="text-gray-300">{{ $t("pricing.customPlan.tagline") }}</span>
             </div>
 
             <div class="text-sm text-gray-200">
@@ -221,25 +225,45 @@
 
   const { t, locale } = useI18n();
 
-  const billingPeriod = ref('monthly'); // atau 'annual'
   const planTypes = ['basic', 'regular'];
+  const billingPeriod = ref('monthly'); // atau 'annual'
+  const setBillingPeriod = (period) => {
+    billingPeriod.value = period;
+  };
 
-  const planPrices = ref({
-    basic: {
-      price: 1225000,
-      originalPrice: 3500000,
-      discount: true,
-      popular: false,
-      tag: locale.value === 'id' ? 'Ekonomis' : 'Economical',
-    },
-    regular: {
-      price: 4500000,
-      originalPrice: 6000000,
-      discount: true,
-      popular: true,
-      tag: locale.value === 'id' ? 'Terlaris' : 'Best Seller',
-    },
+  const planPrices = computed(() => {
+    const isMonthly = billingPeriod.value === 'monthly';
+    const isIndo = locale.value === 'id';
+
+    const basicOriginalPrice = 4000000;
+    const regularOriginalPrice = 8500000;
+    const basicDiscount = isMonthly ? 15 : 25;
+    const regularDiscount = isMonthly ? 25 : 35;
+
+    const calculatePrice = (original, discount) => {
+      return Math.round(original * (1 - discount / 100));
+    };
+
+    return {
+      basic: {
+        originalPrice: basicOriginalPrice,
+        discountAmount: basicDiscount,
+        price: calculatePrice(basicOriginalPrice, basicDiscount),
+        discount: true,
+        popular: false,
+        tag: isIndo ? 'Ekonomis' : 'Economical',
+      },
+      regular: {
+        originalPrice: regularOriginalPrice,
+        discountAmount: regularDiscount,
+        price: calculatePrice(regularOriginalPrice, regularDiscount),
+        discount: true,
+        popular: true,
+        tag: isIndo ? 'Terlaris' : 'Best Seller',
+      },
+    };
   });
+
 
   function formatRupiah(value) {
     return new Intl.NumberFormat('id-ID', {
@@ -274,6 +298,15 @@
         }
       }
 
+       // Custom fitur untuk regular annual
+      if (planType === 'regular' && i === 2) {
+        if (billingPeriod.value === 'annual') {
+          feature = locale.value === 'id'
+            ? 'Gratis Hosting 1 Tahun'
+            : '1 Year Free Hosting';
+        }
+      }
+
       // Stop jika key tidak ditemukan
       if (feature === `pricing.plans.${planType}.features.${i}`) {
         break;
@@ -297,6 +330,7 @@
         description: t(`pricing.plans.${type}.description`),
         features: getFeatures(type),
         discount: priceInfo.discount,
+        discountAmount: priceInfo.discountAmount,
         popular: priceInfo.popular,
         tag: t(`pricing.planTags.${getTagKey(type)}`),
       };
@@ -322,12 +356,12 @@
 
 
 <style scoped>
-body {
-  background: radial-gradient(circle at top left, #0f172a, #000000);
-}
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
+  body {
+    background: radial-gradient(circle at top left, #0f172a, #000000);
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
 </style>

@@ -81,7 +81,7 @@ const messages = {
           features: {
             0: "1 Page Responsive Website",
             1: "Basic Contact Form",
-            2: "Free Hosting 1 Month",
+            2: "1 Month Free Hosting",
             3: "1 Time Revision",
           },
         },
@@ -89,9 +89,9 @@ const messages = {
           name: "Regular",
           description: "Complete package for growing businesses",
           features: {
-            0: "8 Page Responsive Website",
+            0: "Up to 8 Page Responsive Website",
             1: "Contact Form + WhatsApp Integration",
-            2: "1 Year Free Hosting",
+            2: "1 Month Free Hosting",
             3: "Simple Admin Dashboard",
             4: "3 Minor Revisions",
           },
@@ -110,7 +110,6 @@ const messages = {
           },
         },
       },
-      discount: "50% Discount",
       popular: "Most Popular",
       perProject: "/ project",
       mostValue: "Best Value",
@@ -119,7 +118,8 @@ const messages = {
       annualBilling: "Annual Billing",
       perYear: "/ year",
       perMonth: "/ month",
-      save: "Save 50%",
+      save: "Save",
+      annualSave: 'Discount extra +10%',
     },
     about: {
       title: "About Katalis Dev",
@@ -238,7 +238,7 @@ const messages = {
           name: "Basic",
           description: "Solusi hemat untuk bisnis yang baru mulai",
           features: {
-            0: "Website 3 Halaman Responsif",
+            0: "1 Halaman Website Responsif",
             1: "Form Kontak Dasar",
             2: "Gratis Hosting 1 Bulan",
             3: "1 Revisi Minor",
@@ -248,7 +248,7 @@ const messages = {
           name: "Regular",
           description: "Paket lengkap untuk bisnis yang berkembang",
           features: {
-            0: "Website 8 Halaman Responsif",
+            0: "Hingga 8 Halaman Website Responsif",
             1: "Form Kontak + Integrasi WhatsApp",
             2: "Gratis Hosting 1 Tahun",
             3: "Dasbor Admin Sederhana",
@@ -269,7 +269,6 @@ const messages = {
           },
         },
       },
-      discount: "Diskon 50%",
       popular: "Paling Laris!",
       perProject: "/ proyek",
       mostValue: "Nilai Terbaik",
@@ -279,6 +278,7 @@ const messages = {
       perYear: "/ tahun",
       perMonth: "/ bulan",
       save: "Hemat",
+      annualSave: "Diskon ekstra +10%",
       getStarted: "Mulai Sekarang",
     },
     about: {
@@ -286,15 +286,15 @@ const messages = {
       intro:
         'Di <span class="font-semibold text-white">Katalis Dev</span>, kita suka banget bantu bisnis masuk ke era digital. Dengan semangat inovasi dan kualitas, kita bikin website keren, aplikasi mobile, dan pengalaman digital yang bakal dorong pertumbuhan bisnismu!',
       vision: {
-        title: "Visi Kita",
+        title: "Visi Kami",
         desc: "Pengen bantu bisnis kamu tumbuh dengan solusi digital keren yang berdampak.",
       },
       mission: {
-        title: "Misi Kita",
+        title: "Misi Kami",
         desc: "Bikin produk inovatif yang ngga cuma sesuai, tapi lebih dari yang kamu harapkan.",
       },
       values: {
-        title: "Nilai Kita",
+        title: "Nilai Kami",
         desc: "Jujur, inovatif, kolaboratif, dan selalu kasih yang terbaik di setiap proyek.",
       },
     },
